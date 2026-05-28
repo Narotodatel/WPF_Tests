@@ -1,0 +1,86 @@
+﻿<Window x:Class="ExamCalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Калькулятор экзамена"
+        Height="550"
+        Width="400">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Text="Расчет оценки экзамена"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Margin="0 0 0 20"/>
+
+        <!-- Выбор уровня -->
+        <StackPanel Grid.Row="1" Margin="0 5">
+            <TextBlock Text="Уровень экзамена:"/>
+
+            <ComboBox x:Name="LevelComboBox"
+                      SelectedIndex="0"
+                      Height="30">
+                <ComboBoxItem Content="БУ"/>
+                <ComboBoxItem Content="ПУ"/>
+                <ComboBoxItem Content="ПУ+"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Модуль 1 -->
+        <StackPanel Grid.Row="2" Margin="0 5">
+            <TextBlock Text="Модуль 1 (0-10):"/>
+            <TextBox x:Name="Module1TextBox" Height="30"/>
+        </StackPanel>
+
+        <!-- Модуль 2 -->
+        <StackPanel Grid.Row="3" Margin="0 5">
+            <TextBlock Text="Модуль 2 (0-15):"/>
+            <TextBox x:Name="Module2TextBox" Height="30"/>
+        </StackPanel>
+
+        <!-- Модуль 3 -->
+        <StackPanel Grid.Row="4" Margin="0 5">
+            <TextBlock Text="Модуль 3 (0-25):"/>
+            <TextBox x:Name="Module3TextBox" Height="30"/>
+        </StackPanel>
+
+        <!-- Модуль 4 -->
+        <StackPanel Grid.Row="5" Margin="0 5">
+            <TextBlock Text="Модуль 4 (0-25):"/>
+            <TextBox x:Name="Module4TextBox" Height="30"/>
+        </StackPanel>
+
+        <!-- Модуль 5 -->
+        <StackPanel Grid.Row="6" Margin="0 5">
+            <TextBlock Text="Модуль 5 (0-25):"/>
+            <TextBox x:Name="Module5TextBox" Height="30"/>
+        </StackPanel>
+
+        <!-- Кнопка -->
+        <Button Grid.Row="7"
+                Content="Рассчитать"
+                Height="40"
+                Margin="0 15 0 15"
+                Click="CalculateButton_Click"/>
+
+        <!-- Результат -->
+        <TextBlock x:Name="ResultTextBlock"
+                   Grid.Row="8"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   TextWrapping="Wrap"/>
+
+    </Grid>
+</Window>
