@@ -37,7 +37,9 @@
 # Функционал
 ## Интерфейс 
 <img width="395" height="552" alt="image" src="https://github.com/user-attachments/assets/a21b2056-ef0d-4e43-adcc-184d431c6134" />
+
 ## Обозреватель тестов
+
 <img width="791" height="437" alt="image" src="https://github.com/user-attachments/assets/d93da9ef-aca3-4d98-bc56-7bdf2bc7de4e" />
 
 
